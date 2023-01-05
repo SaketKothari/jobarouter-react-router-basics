@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Jobarouter
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img style="text-align:center" src="https://user-images.githubusercontent.com/81709725/210764359-d69bff8d-2298-4052-bdef-f65f329055ad.png" width=700px/>
 
-## Available Scripts
+#
 
-In the project directory, you can run:
+ ### Why ?
 
-### `npm start`
+* Whenever you make a site using react you're normally making something called a single page application or an SPA for short and what that means is that when we request the
+website from the server in the browser, the server then sends back just a single HTML page and along with that the react JavaScript code needed to render content and react components onto that page.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* Now in actual fact you'll be very surprised to know that most websites don't consist just of a single page of content and normally you click on a link in the menu
+to go to a different page right, so in traditional websites that are not single page applications when we click on one of those links it would send a fresh request to the server for a brand new HTML page but that's not the way that react in general were designed to work instead Single page apps like to handle all of the routing in the browser on the front end and not send any additional requests to the server for new pages.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+* That's where the react router is needed because out of the box react doesn't come loaded with a fully baked front-end routing mechanism so typically when we make react site we install an additional package called react router Dom which allows us to easily handle routing in the browser and the way this works is that when we click on a link to
+a different page in the website the react router intercepts that request and stops it reaching the server and instead the router swaps out the page content depending on whatever page that we requested where each page is essentially  just a react component.
 
-### `npm test`
+* This is a really fast process because it's all handled on the front end in the browser and we're not sending requests to the server so that's the why and a bit about
+the how. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### What are we making ? 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* We'll be making a simple react application which lists out a load of jobs and we can click on each job to see the job details we've also got some other Pages like a help
+page which has a few nested routes as well for additional content you can see at the top of the site we've got some breadcrumbs as well which we'll be making. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* With a little help from the react router too and aside from all the essentials we've learned about some of the newer react router features such as loaders, error components , forms and actions.
 
-### `npm run eject`
+#
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img style="text-align:center" src="https://user-images.githubusercontent.com/81709725/210767141-0f8fc865-ff65-4218-acd3-1028a47f0ba6.png" width=800px/>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+#
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Usage
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Install dependencies
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Run
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm start
+```
 
-### Code Splitting
+To run the json server
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm i -g json-server
+json-server -p 4000 -w ./data/db.json
+http://localhost:4000/careers - See all json data
+```
